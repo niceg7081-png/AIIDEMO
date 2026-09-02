@@ -1,0 +1,9 @@
+# Local secrets and patient data must never be uploaded to a repository or host.
+.env
+mem.env
+data.json
+node_modules/
+
+# Local tooling
+.DS_Store
+npm-debug.log*

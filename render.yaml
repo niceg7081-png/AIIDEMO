@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: novadent
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.6-luna
+      - key: AIRTABLE_TOKEN
+        sync: false
+      - key: AIRTABLE_BASE_ID
+        sync: false
+      - key: AIRTABLE_LEADS_TABLE
+        value: Leads
+      - key: AIRTABLE_PATIENTS_TABLE
+        value: Patients
+      - key: AIRTABLE_APPOINTMENTS_TABLE
+        value: Appointments
