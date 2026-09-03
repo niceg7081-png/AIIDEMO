@@ -16,6 +16,16 @@
 
 Портал власника має захищений вхід за значенням `ADMIN_PASSWORD`, показує записи в таблиці, дозволяє змінювати їхні статуси та автоматично оновлює дані кожні 15 секунд.
 
+## Telegram і WhatsApp
+
+Після додавання ключів у Render кожна нова заявка з сайту надходить власнику в Telegram та WhatsApp.
+
+- Telegram webhook: `https://YOUR-RENDER-URL/api/webhooks/telegram`
+- WhatsApp webhook: `https://YOUR-RENDER-URL/api/webhooks/whatsapp`
+- Перевірка WhatsApp використовує значення `WHATSAPP_VERIFY_TOKEN`.
+
+Бот у кожному каналі приймає текст українською або російською та відповідає українською. Усі ключі зберігайте лише в Environment у Render, не в GitHub.
+
 Якщо ключі OpenAI/Airtable порожні, застосунок усе одно працює локально та зберігає записи в `data.json`.
 
 ## Публікація на Render
